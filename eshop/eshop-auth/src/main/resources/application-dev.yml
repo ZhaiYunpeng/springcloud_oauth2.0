@@ -6,7 +6,7 @@ spring:
     name: eshop-auth
   redis:
     database: 0
-    host: 192.168.0.117
+    host: 127.0.0.1
     port: 6379
     password:
     jedis:
@@ -16,9 +16,9 @@ spring:
         min-idle: 0
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/eshop_member?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/base?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowMultiQueries=true&allowPublicKeyRetrieval=true
     username: root
-    password: root
+    password: mysql
   druid:
     initialSize: 5 #初始化连接大小
     minIdle: 5     #最小连接池数量

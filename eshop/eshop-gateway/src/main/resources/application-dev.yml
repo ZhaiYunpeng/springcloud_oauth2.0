@@ -4,7 +4,17 @@ server:
 spring:
   application:
     name: eshop-gateway
-
+  #--------------------gateway-----------------------
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: v1
+          uri: https://www.baidu.com
+          predicates:
+            - Path=/gateway_test
 #--------------------eureka---------------------
 eureka:
   instance:
@@ -63,4 +73,4 @@ hystrix:
           enabled: true
         isolation:
           thread:
-            timeoutInMilliseconds: 3500
+            timeoutInMilliseconds: 36000
